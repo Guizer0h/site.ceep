@@ -223,7 +223,7 @@ h1 {
 .card {
     width: 420px;
     height: 560px;
-    background: #efb07a;
+    background: #ffffff;
     border-radius: 25px;
     overflow: hidden;
     padding: 0;
@@ -248,14 +248,14 @@ h1 {
     font-family: 'Bodoni Moda', serif;
     font-size: 2.2rem;
     line-height: 1;
-    color: #421818;
+    color: #176dcf;
     margin-bottom: 20px;
     font-weight: 500;
 }
 
 .saiba-mais {
     display: inline-block;
-    color: #421818;
+    color: #176dcf;
     text-decoration: none;
     font-style: italic;
     margin-bottom: 20px;
@@ -269,11 +269,11 @@ h1 {
 }
 
 .tags span {
-    border: 1px solid #421818;
+    border: 1px solid #176dcf;
     border-radius: 20px;
     padding: 6px 14px;
     font-size: 0.8rem;
-    color: #421818;
+    color: #176dcf;
 }
 
 .card.hidden-card {
