@@ -2,7 +2,12 @@ body {
     background-color: #e2e3e4;
     margin: 0;
     font-family: sans-serif;
+    margin-top: 12%;
 
+}
+
+main {
+    padding-top: 200px;
 }
 
 #main-header {
@@ -112,307 +117,6 @@ body {
     margin: 0;
 }
 
-h1 {
-    margin-left: 4%;
-    margin-top: 6%;
-    color: #176dcf;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 3rem;
-    font-weight: 500;
-}
-
-
-#icone {
-    color: #176dcf;
-}
-
-.intro {
-    background-color: #176dcf;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 88px 10%;
-    gap: 50px;
-    flex-wrap: wrap;
-    margin-bottom: 4%;
-}
-
-.intro-img img {
-    width: 100%;
-    max-width: 500px;
-    border-radius: 8px;
-    margin-top: 65px;
-
-}
-
-.intro-content {
-    max-width: 500px;
-}
-
-.intro p {
-    font-family: 'Playfair Display', sans-serif;
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 2rem;
-    line-height: 1.4;
-    color: white;
-}
-
-.btn-outline1 {
-    background: transparent;
-    color: #ffffff;
-    border: 2px solid #ffffff;
-    padding: 18px 55px;
-    font-size: 1rem;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
-    border-radius: 0;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.btn-outline1:hover {
-    background-color: #ffffff;
-    color: #176dcf;
-    border-color: #176dcf;
-}
-
-.intro2 {
-    color: #176dcf;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 65vh;
-    padding: 0 10%;
-    gap: 50px;
-    position: relative;
-    overflow: visible;
-    margin-bottom: 3%;
-}
-
-.intro2-img {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.intro2-img img {
-    width: 100%;
-    max-width: 700px;
-    height: auto;
-    border-radius: 5px;
-    object-fit: cover;
-}
-
-
-.intro2-content {
-    flex: 1;
-    max-width: 600px;
-}
-
-.intro2 p {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: 1.4rem;
-    line-height: 1.5;
-    margin-bottom: 2rem;
-    color: #596672;
-}
-
-.btn-outline2 {
-    background: transparent;
-    color: #596672;
-    border: 2px solid #596672;
-    padding: 18px 55px;
-    font-size: 1rem;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
-    border-radius: 0;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.btn-outline2:hover {
-    background-color: #176dcf;
-    color: white;
-    border-color: #176dcf;
-}
-
-.carousel {
-    width: 100%;
-    overflow: hidden;
-    padding: 0px 0;
-    background-color: #e2e3e4;
-    display: flex;
-    flex-direction: column;
-    gap: 0px;
-}
-
-.carousel-row {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-}
-
-.carousel-track {
-    display: flex;
-    width: max-content;
-    will-change: transform;
-    transform: translateX(0);
-    animation: scroll-right 90s linear infinite;
-}
-
-.row-bottom .carousel-track {
-    display: flex;
-    width: max-content;
-    will-change: transform;
-    transform: translateX(0);
-    animation: scroll-left 90s linear infinite;
-}
-
-
-.card-carousel {
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    margin: 30px 15px;
-    padding: 0;
-    width: 260px;
-    height: 190px;
-    flex-shrink: 0;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card-carousel img {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
-    border-radius: 12px;
-}
-
-@keyframes scroll-right {
-    0% {
-        transform: translateX(0);
-    }
-
-    100% {
-        transform: translateX(-50%);
-    }
-}
-
-@keyframes scroll-left {
-    0% {
-        transform: translateX(-50%);
-    }
-
-    100% {
-        transform: translateX(0);
-    }
-}
-
-.btn-fetec {
-    justify-content: center;
-    display: flex;
-    margin-top: 35px;
-    margin-bottom: 50px;
-}
-
-.cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 35px;
-}
-
-.card {
-    width: 420px;
-    height: 560px;
-    background: #ffffff;
-    border-radius: 25px;
-    overflow: hidden;
-    padding: 0;
-    transition: .3s;
-}
-
-.card:hover {
-    transform: translateY(-8px);
-}
-
-.card img {
-    width: 100%;
-    height: 260px;
-    object-fit: cover;
-}
-
-.card-content {
-    padding: 25px;
-}
-
-.card h2 {
-    font-family: 'Bodoni Moda', serif;
-    font-size: 2.2rem;
-    line-height: 1;
-    color: #176dcf;
-    margin-bottom: 20px;
-    font-weight: 500;
-}
-
-.saiba-mais {
-    display: inline-block;
-    color: #176dcf;
-    text-decoration: none;
-    font-style: italic;
-    margin-bottom: 20px;
-    font-size: 1rem;
-}
-
-.tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.tags span {
-    border: 1px solid #176dcf;
-    border-radius: 20px;
-    padding: 6px 14px;
-    font-size: 0.8rem;
-    color: #176dcf;
-}
-
-.btn-mostrar-mais {
-    display: flex;
-    justify-content: center;
-    margin: 40px 0;
-
-}
-
-.btn-outline3 {
-    background: transparent;
-    color: #596672;
-    border: 2px solid #596672;
-    padding: 18px 55px;
-    font-size: 1rem;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
-    border-radius: 0;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.btn-outline3:hover {
-    background-color: #176dcf;
-    color: white;
-    border-color: #176dcf;
-}
-
-.card.hidden-card {
-    display: none;
-}
-
 .logo-titulo {
     display: flex;
     align-items: center;
@@ -443,6 +147,359 @@ h1 {
 
 .nav-menu a:hover {
     color: #00498E;
+}
+
+
+/* ================================================= */
+/* PÁGINA DE CURSO (administracao.html + futuras)     */
+/* ================================================= */
+
+.curso-voltar {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin: 130px 0 0 4%;
+    color: #176dcf;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+}
+
+.curso-voltar:hover {
+    text-decoration: underline;
+}
+
+.curso-hero {
+    display: flex;
+    align-items: stretch;
+    gap: 50px;
+    padding: 30px 10% 80px;
+    flex-wrap: wrap;
+}
+
+.curso-hero-img {
+    flex: 1 1 420px;
+}
+
+.curso-hero-img img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.curso-hero-content {
+    flex: 1 1 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.curso-eyebrow {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #176dcf;
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+}
+
+.curso-hero-content h1 {
+    margin: 0 0 20px;
+    color: #176dcf;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.2rem;
+    font-weight: 600;
+    line-height: 1.05;
+}
+
+.curso-hero-content p {
+    font-family: 'Montserrat', sans-serif;
+    color: #596672;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.curso-hero-content .tags {
+    margin-bottom: 30px;
+}
+
+.curso-hero-content .btn-outline1 {
+    background: transparent;
+    color: #596672;
+    border: 2px solid #596672;
+    padding: 18px 55px;
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    border-radius: 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.curso-hero-content .btn-outline1:hover {
+    background-color: #176dcf;
+    color: white;
+    border: 2px solid #176dcf;
+}
+
+/* SOBRE O CURSO */
+
+.curso-sobre {
+    background: white;
+    padding: 70px 10%;
+}
+
+.curso-sobre h2,
+.curso-grade h2,
+.curso-mercado h2,
+.curso-galeria h2 {
+    font-family: 'Cormorant Garamond', serif;
+    color: #176dcf;
+    font-size: 2.4rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.curso-sobre p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: 'Montserrat', sans-serif;
+    color: #596672;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    text-align: center;
+}
+
+.curso-destaques {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 45px;
+}
+
+.destaque-item {
+    text-align: center;
+    max-width: 220px;
+}
+
+.destaque-item i {
+    font-size: 1.8rem;
+    color: #176dcf;
+    margin-bottom: 12px;
+}
+
+.destaque-item p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #2a2a2a;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+/* GRADE CURRICULAR */
+
+.curso-grade {
+    background: #e2e3e4;
+    padding: 70px 10%;
+}
+
+.grade-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.grade-item {
+    background: white;
+    border-radius: 16px;
+    padding: 30px 25px;
+    border-top: 4px solid #176dcf;
+    transition: transform 0.3s ease;
+}
+
+.grade-item:hover {
+    transform: translateY(-6px);
+}
+
+.grade-item i {
+    font-size: 1.6rem;
+    color: #176dcf;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.grade-item h3 {
+    font-family: 'Bodoni Moda', serif;
+    font-size: 1.2rem;
+    color: #0e2a4d;
+    margin: 0 0 8px;
+    font-weight: 500;
+}
+
+.grade-item p {
+    font-family: 'Montserrat', sans-serif;
+    color: #596672;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* MERCADO DE TRABALHO */
+
+.curso-mercado {
+    background: white;
+    padding: 70px 10%;
+}
+
+.mercado-lista {
+    list-style: none;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.mercado-lista li {
+    font-family: 'Montserrat', sans-serif;
+    color: #2a2a2a;
+    font-size: 0.98rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.mercado-lista i {
+    color: #176dcf;
+    margin-top: 3px;
+}
+
+/* GALERIA */
+
+.curso-galeria {
+    background: #e2e3e4;
+    padding: 70px 10% 90px;
+}
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.galeria-grid img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* CTA FINAL */
+
+.curso-cta {
+    background-color: #176dcf;
+    color: white;
+    text-align: center;
+    padding: 70px 10%;
+}
+
+.curso-cta h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.4rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.curso-cta p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.05rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+/* RESPONSIVO - PÁGINA DE CURSO */
+
+@media (max-width: 1024px) {
+    .curso-hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .galeria-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .curso-voltar {
+        margin-top: 100px;
+    }
+
+    .curso-hero {
+        text-align: center;
+        justify-content: center;
+    }
+
+    .curso-hero-content {
+        align-items: center;
+    }
+
+    .curso-hero-content .btn-outline1 {
+        align-self: center;
+    }
+
+    .mercado-lista {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .curso-hero-img img {
+        height: 260px;
+    }
+
+    .curso-sobre,
+    .curso-grade,
+    .curso-mercado,
+    .curso-galeria,
+    .curso-cta {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    .curso-sobre h2,
+    .curso-grade h2,
+    .curso-mercado h2,
+    .curso-galeria h2,
+    .curso-cta h2 {
+        font-size: 1.9rem;
+    }
+
+    .galeria-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .curso-hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .galeria-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 footer {
