@@ -46,3 +46,33 @@ document.querySelectorAll(".nav-menu a").forEach(link => {
         navMenu.classList.remove("active");
     });
 });
+
+const gruposDeCards = document.querySelectorAll(".cards");
+const botoesMostrarMais = document.querySelectorAll(".toggle-cards-btn");
+const QUANTIDADE_INICIAL = 4;
+
+gruposDeCards.forEach((grupo, i) => {
+    const botao = botoesMostrarMais[i];
+    if (!botao) return;
+
+    const cards = grupo.querySelectorAll(".card");
+
+    cards.forEach((card, index) => {
+        if (index >= QUANTIDADE_INICIAL) {
+            card.classList.add("hidden-card");
+        }
+    });
+
+    botao.addEventListener("click", () => {
+        const jaExpandido = botao.getAttribute("aria-expanded") === "true";
+
+        cards.forEach((card, index) => {
+            if (index >= QUANTIDADE_INICIAL) {
+                card.classList.toggle("hidden-card");
+            }
+        });
+
+        botao.textContent = jaExpandido ? "Mostrar mais" : "Mostrar menos";
+        botao.setAttribute("aria-expanded", String(!jaExpandido));
+    });
+});

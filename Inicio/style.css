@@ -33,6 +33,7 @@ body {
     margin-left: 10px;
     color: white;
     font-weight: 700;
+    transition: color 0.4s ease;
 }
 
 #main-header .nav-menu ul {
@@ -50,7 +51,7 @@ body {
     font-weight: 600;
     text-decoration: none;
     font-size: 1rem;
-    transition: color 0.3s ease;
+    transition: color 0.4s ease;
 }
 
 .nav-menu a::after {
@@ -61,7 +62,6 @@ body {
     width: 0;
     height: 2px;
     background: white;
-    transition: width 0.3s ease, left 0.3s ease;
 }
 
 .nav-menu a:hover::after {
@@ -87,10 +87,6 @@ body {
     color: #0e4fa8;
 }
 
-#main-header.scrolled .nav-menu {
-    background: white;
-}
-
 #main-header.scrolled .nav-menu a::after {
     background: #176dcf;
 }
@@ -102,6 +98,7 @@ body {
     color: white;
     z-index: 10000;
     margin-right: 2rem;
+    transition: color 0.4s ease;
 }
 
 #main-header.scrolled .hamburger {
@@ -332,7 +329,7 @@ h1 {
     width: 400px;
     height: 540px;
     background: #ffffff;
-    border-radius: 50px;
+    border-radius: 25px;
     overflow: hidden;
     padding: 0;
     transition: .3s;
@@ -531,7 +528,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 100px;
+    margin-top: 94px;
     overflow: visible;
 }
 
