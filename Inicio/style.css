@@ -105,10 +105,6 @@ body {
     color: #176dcf;
 }
 
-.nav-menu ul {
-    margin: 0;
-}
-
 h1 {
     margin-left: 4%;
     margin-top: 6%;
@@ -256,18 +252,21 @@ h1 {
     display: flex;
     width: max-content;
     will-change: transform;
-    transform: translateX(0);
-    animation: scroll-right 90s linear infinite;
+    animation: scroll-right var(--carousel-duration, 38s) linear infinite;
 }
 
 .row-bottom .carousel-track {
-    display: flex;
-    width: max-content;
-    will-change: transform;
-    transform: translateX(0);
-    animation: scroll-left 90s linear infinite;
+    animation-name: scroll-left;
 }
 
+.carousel-row:hover .carousel-track {
+    animation-play-state: paused;
+}
+
+.carousel-set {
+    display: flex;
+    flex-shrink: 0;
+}
 
 .card-carousel {
     background: white;
@@ -292,22 +291,28 @@ h1 {
 }
 
 @keyframes scroll-right {
-    0% {
+    from {
         transform: translateX(0);
     }
 
-    100% {
-        transform: translateX(-50%);
+    to {
+        transform: translateX(calc(-1 * var(--carousel-set-width, 0px)));
     }
 }
 
 @keyframes scroll-left {
-    0% {
-        transform: translateX(-50%);
+    from {
+        transform: translateX(calc(-1 * var(--carousel-set-width, 0px)));
     }
 
-    100% {
+    to {
         transform: translateX(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .carousel-track {
+        animation: none;
     }
 }
 
@@ -778,7 +783,7 @@ footer {
     /* LOGO TRANSIÇÃO */
 
     .logo-transicao {
-        height: 150px;
+        height: 144px;
     }
 
     .logo-transicao img {

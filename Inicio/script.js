@@ -76,3 +76,41 @@ gruposDeCards.forEach((grupo, i) => {
         botao.setAttribute("aria-expanded", String(!jaExpandido));
     });
 });
+
+const VELOCIDADE_PX_POR_SEGUNDO = 40; // ajuste aqui pra deixar mais rápido ou mais lento
+
+function inicializarCarrossel(track) {
+    const setOriginal = track.querySelector(".carousel-set");
+    if (!setOriginal) return;
+
+    track.querySelectorAll(".carousel-set.clone").forEach((clone) => clone.remove());
+
+    const larguraSet = setOriginal.getBoundingClientRect().width;
+    if (larguraSet === 0) return;
+
+    const larguraContainer = track.parentElement.getBoundingClientRect().width;
+    const copiasNecessarias = Math.ceil((larguraContainer * 2) / larguraSet) + 1;
+
+    for (let i = 0; i < copiasNecessarias; i++) {
+        const clone = setOriginal.cloneNode(true);
+        clone.classList.add("clone");
+        clone.setAttribute("aria-hidden", "true");
+        track.appendChild(clone);
+    }
+
+    const duracao = larguraSet / VELOCIDADE_PX_POR_SEGUNDO;
+    track.style.setProperty("--carousel-set-width", `${larguraSet}px`);
+    track.style.setProperty("--carousel-duration", `${duracao}s`);
+}
+
+function inicializarTodosCarrosseis() {
+    document.querySelectorAll(".carousel-track").forEach(inicializarCarrossel);
+}
+
+inicializarTodosCarrosseis();
+
+let resizeTimeoutCarrossel;
+window.addEventListener("resize", () => {
+    clearTimeout(resizeTimeoutCarrossel);
+    resizeTimeoutCarrossel = setTimeout(inicializarTodosCarrosseis, 200);
+});
