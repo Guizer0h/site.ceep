@@ -558,6 +558,12 @@ footer {
     transform: translateX(0);
 }
 
+@media (max-width: 1440px) {
+    .logo-transicao {
+        height: 172px;
+    }
+}
+
 @media (max-width: 1024px) {
 
     h1 {
@@ -587,6 +593,10 @@ footer {
     .card-carousel {
         width: 220px;
         height: 160px;
+    }
+
+    .logo-transicao {
+        height: 180px;
     }
 }
 
@@ -664,6 +674,10 @@ footer {
 
     .intro2-img img {
         max-width: 80%;
+    }
+
+    .logo-transicao {
+        height: 180px;
     }
 
 }

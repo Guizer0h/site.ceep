@@ -49,7 +49,34 @@ document.querySelectorAll(".nav-menu a").forEach(link => {
 
 const gruposDeCards = document.querySelectorAll(".cards");
 const botoesMostrarMais = document.querySelectorAll(".toggle-cards-btn");
-const QUANTIDADE_INICIAL = 4;
+
+// Telas com até essa largura (ex: notebooks) mostram 3 cards antes de "Mostrar mais".
+// Telas maiores (monitores/desktop) mostram 4. Ajuste esse número se quiser mudar o ponto de corte.
+const LARGURA_NOTEBOOK = 1440;
+
+function getQuantidadeInicial() {
+    return window.innerWidth <= LARGURA_NOTEBOOK ? 3 : 4;
+}
+
+function aplicarCardsVisiveis() {
+    const quantidadeInicial = getQuantidadeInicial();
+
+    gruposDeCards.forEach((grupo, i) => {
+        const botao = botoesMostrarMais[i];
+        if (!botao) return;
+
+        // se o usuário já clicou em "Mostrar mais", não mexe nos cards dele
+        const jaExpandido = botao.getAttribute("aria-expanded") === "true";
+        if (jaExpandido) return;
+
+        const cards = grupo.querySelectorAll(".card");
+        cards.forEach((card, index) => {
+            card.classList.toggle("hidden-card", index >= quantidadeInicial);
+        });
+    });
+}
+
+aplicarCardsVisiveis();
 
 gruposDeCards.forEach((grupo, i) => {
     const botao = botoesMostrarMais[i];
@@ -57,17 +84,12 @@ gruposDeCards.forEach((grupo, i) => {
 
     const cards = grupo.querySelectorAll(".card");
 
-    cards.forEach((card, index) => {
-        if (index >= QUANTIDADE_INICIAL) {
-            card.classList.add("hidden-card");
-        }
-    });
-
     botao.addEventListener("click", () => {
         const jaExpandido = botao.getAttribute("aria-expanded") === "true";
+        const quantidadeInicial = getQuantidadeInicial();
 
         cards.forEach((card, index) => {
-            if (index >= QUANTIDADE_INICIAL) {
+            if (index >= quantidadeInicial) {
                 card.classList.toggle("hidden-card");
             }
         });
@@ -75,6 +97,12 @@ gruposDeCards.forEach((grupo, i) => {
         botao.textContent = jaExpandido ? "Mostrar mais" : "Mostrar menos";
         botao.setAttribute("aria-expanded", String(!jaExpandido));
     });
+});
+
+let resizeTimeoutCards;
+window.addEventListener("resize", () => {
+    clearTimeout(resizeTimeoutCards);
+    resizeTimeoutCards = setTimeout(aplicarCardsVisiveis, 200);
 });
 
 const VELOCIDADE_PX_POR_SEGUNDO = 40; // ajuste aqui pra deixar mais rápido ou mais lento
