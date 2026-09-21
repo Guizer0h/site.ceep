@@ -28,18 +28,32 @@
         </div>
 
         <nav class="nav-menu" id="nav-menu">
+            <div class="nav-menu-header">
+                <span class="nav-menu-title">Menu</span>
+                <button class="nav-close" id="nav-close" aria-label="Fechar menu">
+                    <i class="fas fa-xmark"></i>
+                </button>
+            </div>
             <ul>
-                <li><a href="#">Início</a></li>
-                <li><a href="#cursos">Cursos</a></li>
-                <li><a href="https://www.areadoaluno.seed.pr.gov.br/servicosaoaluno/pages/publico/login.jsf"
-                        target="_blank">Área de aluno</a></li>
-                <li><a href="#fetec">FETEC</a></li>
-                <li><a href="#rodape">Contato</a></li>
+                <li><a href="/"><i class="fas fa-house"></i>Início</a></li>
+                <li><a href="/#cursos"><i class="fas fa-graduation-cap"></i>Cursos</a></li>
+                <li><a href="/#laboratórios"><i class="fas fa-flask"></i>Laboratórios</a></li>
+                <li><a href="/#fetec"><i class="fas fa-lightbulb"></i>FETEC</a></li>
+                <li><a href="#rodape"><i class="fas fa-envelope"></i>Contato</a></li>
+                <li class="nav-menu-divider"></li>
+                <li>
+                    <a href="https://www.areadoaluno.seed.pr.gov.br/servicosaoaluno/pages/publico/login.jsf"
+                        target="_blank" class="nav-menu-cta">
+                        <i class="fas fa-user"></i>Área de aluno
+                    </a>
+                </li>
             </ul>
         </nav>
     </header>
 
-    <section class="intro">
+    <div class="nav-overlay" id="nav-overlay"></div>
+
+    <section class="intro" id="inicio">
         <div class="intro-img">
             <img src="/fotos/img.ceep.jpeg" alt="Foto CEEP">
         </div>
@@ -54,7 +68,7 @@
         </div>
     </section>
 
-    <section class="intro2">
+    <section class="intro2" id="laboratórios">
         <div class="intro2-content">
             <p>
                 No CEEP Ozório Gonçalves Nogueira, os alunos têm acesso a laboratórios modernos e equipados para
@@ -469,41 +483,61 @@
     </section>
 
     <footer class="footer" id="rodape">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <h2>CEEP Bandeirantes</h2>
+                <p>
+                    Centro Estadual de Educação Profissional Ozório Gonçalves Nogueira — formando profissionais
+                    técnicos prontos para o mercado de trabalho em Bandeirantes, Paraná.
+                </p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/search/top?q=ceep%20bandeirantes" target="_blank"
+                        rel="noopener noreferrer" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/ceepbandeirantes_oficial" target="_blank"
+                        rel="noopener noreferrer" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://wa.me/5543999890269" target="_blank" rel="noopener noreferrer"
+                        aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
 
-        <div class="footer-info">
-            <h2>Fale Conosco</h2>
-            <p>
-                Entre em contato com o CEEP de Bandeirantes para tirar dúvidas,
-                obter informações sobre nossos cursos ou
-                conversar com a equipe. Estamos prontos pra te ajudar!
-            </p>
-        </div>
+            <div class="footer-links">
+                <h3>Navegação</h3>
+                <ul>
+                    <li><a href="/">Início</a></li>
+                    <li><a href="/#cursos">Cursos</a></li>
+                    <li><a href="/#fetec">FETEC</a></li>
+                    <li><a href="/laboratórios.html">Laboratórios</a></li>
+                </ul>
+            </div>
 
-        <div class="footer-contato">
-            <p><strong>Email</strong> <a href="#">ceepbandeirantes@gmail.com</a></p>
-            <p><strong>Telefone</strong> <a href="#">43 99989 0269</a></p>
-            <p><strong>Endereço</strong><br>
-                3237, R. São Paulo, 3189,<br>
-                Bandeirantes - PR,<br>
-                86360-000
-            </p>
-
-            <div class="social-icons">
-                <a href="https://www.facebook.com/search/top?q=ceep%20bandeirantes" target="_blank"
-                    rel="noopener noreferrer">
-                    <i class="fab fa-facebook"></i>
-                </a>
-                <a href="https://www.instagram.com/ceepbandeirantes_oficial" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://wa.me/5543999890269" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-whatsapp"></i>
-                </a>
+            <div class="footer-contato">
+                <h3>Fale Conosco</h3>
+                <ul>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:ceepbandeirantes@gmail.com">ceepbandeirantes@gmail.com</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <a href="https://wa.me/5543999890269" target="_blank" rel="noopener noreferrer">43 99989
+                            0269</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-location-dot"></i>
+                        <span>R. São Paulo, 3189 — Bandeirantes, PR — 86360-000</span>
+                    </li>
+                </ul>
             </div>
         </div>
 
-        <div class="footer-mapa">
-
+        <div class="footer-bottom">
+            <p>&copy; 2026 CEEP Bandeirantes. Todos os direitos reservados.</p>
         </div>
     </footer>
 
