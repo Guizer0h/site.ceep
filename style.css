@@ -849,6 +849,7 @@ h1 {
         transition: right 0.45s cubic-bezier(0.4, 0, 0.2, 1);
         z-index: 9998;
         overflow-y: auto;
+        overflow-x: hidden;
     }
 
     .nav-menu.active {
@@ -891,11 +892,13 @@ h1 {
         transform: rotate(90deg);
     }
 
-    .nav-menu ul {
+    #main-header .nav-menu ul {
         flex-direction: column;
         gap: 4px;
         padding: 0 14px;
         width: 100%;
+        margin: 0;
+        box-sizing: border-box;
     }
 
     .nav-menu li {

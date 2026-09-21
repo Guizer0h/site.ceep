@@ -97,6 +97,13 @@ main {
     margin-left: 1.5rem;
 }
 
+/* elementos exclusivos do menu mobile: ficam ocultos no desktop */
+.nav-menu-header,
+.nav-menu-divider,
+.nav-overlay {
+    display: none;
+}
+
 .nav-menu a::after {
     content: "";
     position: absolute;
@@ -121,17 +128,6 @@ main {
     background: #176dcf;
 }
 
-/* elementos exclusivos do menu mobile: ficam ocultos no desktop */
-.nav-menu-header,
-.nav-menu-divider,
-.nav-overlay {
-    display: none;
-}
-
-.nav-menu ul li a i {
-    display: none;
-}
-
 .hamburger {
     display: none;
     font-size: 28px;
@@ -139,7 +135,6 @@ main {
     color: white;
     z-index: 10000;
     margin-right: 2rem;
-    transition: color 0.4s ease;
 }
 
 .descricao-fetec {
@@ -237,10 +232,6 @@ main {
         transform: translateY(0);
     }
 }
-
-/* ===========================
-   FOOTER
-=========================== */
 
 .footer {
     background-color: #0e2a4d;
@@ -426,7 +417,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 100px;
+    margin-top: 94px;
     overflow: visible;
 }
 
@@ -522,6 +513,7 @@ main {
         transition: right 0.45s cubic-bezier(0.4, 0, 0.2, 1);
         z-index: 9998;
         overflow-y: auto;
+        overflow-x: hidden;
     }
 
     .nav-menu.active {
@@ -541,7 +533,7 @@ main {
         font-family: 'Cormorant Garamond', serif;
         font-size: 1.4rem;
         font-weight: 600;
-        color: white !important;
+        color: white;
     }
 
     .nav-close {
@@ -564,12 +556,13 @@ main {
         transform: rotate(90deg);
     }
 
-    .nav-menu ul {
+    #main-header .nav-menu ul {
         flex-direction: column;
         gap: 4px;
         padding: 0 14px;
         width: 100%;
         margin: 0;
+        box-sizing: border-box;
     }
 
     .nav-menu li {
@@ -619,14 +612,19 @@ main {
         padding: 14px 16px;
         border-radius: 10px;
         font-size: 1.05rem;
-        color: white !important;
+        color: white;
         transition: background 0.3s ease, padding-left 0.3s ease;
     }
 
     .nav-menu ul li a:hover {
         background: rgba(255, 255, 255, 0.14);
         padding-left: 20px;
-        color: white !important;
+        color: white;
+    }
+
+    #main-header.scrolled .nav-menu a,
+    #main-header.scrolled .nav-menu a:hover {
+        color: white;
     }
 
     .nav-menu ul li a i {
@@ -634,7 +632,7 @@ main {
         width: 20px;
         text-align: center;
         font-size: 1rem;
-        color: rgba(255, 255, 255, 0.8) !important;
+        color: rgba(255, 255, 255, 0.8);
     }
 
     .nav-menu a::after {
@@ -660,7 +658,7 @@ main {
         display: block;
     }
 
-    .hamburger.escondido {
+    #main-header:has(.nav-menu.active) .hamburger {
         display: none;
     }
 }
