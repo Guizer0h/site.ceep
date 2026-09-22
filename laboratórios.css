@@ -303,9 +303,31 @@ h1 {
 @media (max-width: 900px) {
     .lab-item,
     .lab-item.reverse {
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "title"
+            "img"
+            "desc";
         text-align: center;
         gap: 25px;
+    }
+
+    /* "desmonta" o container, pra h2 e p virarem itens do grid junto com .lab-img */
+    .lab-content {
+        display: contents;
+    }
+
+    .lab-img {
+        grid-area: img;
+    }
+
+    .lab-content h2 {
+        grid-area: title;
+    }
+
+    .lab-content p {
+        grid-area: desc;
     }
 }
 
@@ -545,7 +567,6 @@ h1 {
 
 /* elementos exclusivos do menu mobile: ficam ocultos no desktop */
 .nav-menu-header,
-.nav-menu-cta,
 .nav-menu-divider,
 .nav-overlay {
     display: none;
