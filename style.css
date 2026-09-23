@@ -354,8 +354,12 @@ h1 {
     animation-name: scroll-left;
 }
 
-.carousel-row:hover .carousel-track {
-    animation-play-state: paused;
+/* pausa ao passar o mouse — só em telas com hover de verdade (mouse/trackpad).
+   em touch o navegador simula :hover ao tocar, então isso fica de fora pra não parar o carrossel ao tocar */
+@media (hover: hover) and (pointer: fine) {
+    .carousel-row:hover .carousel-track {
+        animation-play-state: paused;
+    }
 }
 
 .carousel-set {
@@ -735,6 +739,27 @@ h1 {
     font-size: 0.85rem;
     color: #7d8ba0;
     margin: 0;
+}
+
+.footer-bottom p + p {
+    margin-top: 8px;
+}
+
+.creditos {
+    font-size: 0.75rem;
+    opacity: 0.75;
+}
+
+.creditos a {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+    transition: color 0.3s ease;
+}
+
+.creditos a:hover {
+    color: white;
 }
 
 .logo-transicao {

@@ -759,6 +759,15 @@ h1 {
     margin: 0;
 }
 
+.footer-bottom p + p {
+    margin-top: 8px;
+}
+
+.creditos {
+    font-size: 0.75rem;
+    opacity: 0.75;
+}
+
 .logo-transicao {
     position: relative;
     background: linear-gradient(to bottom, #e2e3e4 50%, #0e2a4d 50%);
