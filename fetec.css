@@ -419,13 +419,29 @@ main {
     margin: 0;
 }
 
-.footer-bottom p + p {
+.footer-bottom p+p {
     margin-top: 8px;
+}
+
+.footer-links a::before {
+    display: none;
 }
 
 .creditos {
     font-size: 0.75rem;
     opacity: 0.75;
+}
+
+.creditos a {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+    transition: color 0.3s ease;
+}
+
+.creditos a:hover {
+    color: white;
 }
 
 .logo-transicao {
@@ -776,6 +792,10 @@ main {
     .footer-contato h3::after {
         left: 50%;
         transform: translateX(-50%);
+    }
+
+    .footer-links a::before {
+        display: none;
     }
 
     .footer-contato li {

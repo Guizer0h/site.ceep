@@ -301,6 +301,7 @@ h1 {
 }
 
 @media (max-width: 900px) {
+
     .lab-item,
     .lab-item.reverse {
         flex-direction: column;
@@ -741,8 +742,12 @@ h1 {
     margin: 0;
 }
 
-.footer-bottom p + p {
+.footer-bottom p+p {
     margin-top: 8px;
+}
+
+.footer-links a::before {
+    display: none;
 }
 
 .creditos {
