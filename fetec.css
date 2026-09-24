@@ -589,6 +589,16 @@ main {
         transform: rotate(90deg);
     }
 
+    #main-header .nav-menu ul {
+        flex-direction: column;
+        gap: 4px;
+        padding: 0 14px;
+        width: 100%;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+
     .nav-menu ul {
         flex-direction: column;
         gap: 4px;
