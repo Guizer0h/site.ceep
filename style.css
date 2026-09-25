@@ -519,6 +519,7 @@ h1 {
 .logo-titulo {
     display: flex;
     align-items: center;
+    
 }
 
 .nav-menu ul {
